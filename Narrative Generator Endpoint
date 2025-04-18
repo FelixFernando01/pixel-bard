@@ -1,0 +1,7 @@
+app.post('/story', (req, res) => {
+  const { theme, seed } = req.body;
+  const narrative = generateStory(theme, seed);
+  res.json(narrative);
+});
+
+app.listen(3000, () => console.log('Pixel Bard API running on port 3000'));
